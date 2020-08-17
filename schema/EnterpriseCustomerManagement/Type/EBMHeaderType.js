@@ -1,0 +1,441 @@
+var Modeler = require("../Modeler.js");
+var className = 'TypeEBMHeaderType';
+
+var TypeEBMHeaderType = function(json, parentObj) {
+  parentObj = parentObj || this;
+	
+	const data = {
+	  EBMID: {
+      type: "TypeIdentifierType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:EBMID",
+        type: "IdentifierType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    EBMName: {
+      type: "TypeNameType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:EBMName",
+        type: "NameType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    EBOName: {
+      type: "TypeNameType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:EBOName",
+        type: "NameType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    CreationDateTime: {
+      type: "TypeDateTimeType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:CreationDateTime",
+        type: "DateTimeType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    RequestEBMID: {
+      type: "TypeIdentifierType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:RequestEBMID",
+        type: "IdentifierType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    VerbCode: {
+      type: "TypeCodeType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:VerbCode",
+        type: "CodeType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    MessageProcessingInstruction: {
+      type: "TypeMessageProcessingInstructionType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:MessageProcessingInstruction",
+        type: "MessageProcessingInstructionType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    Sender: {
+      type: "TypeSenderType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:Sender",
+        type: "SenderType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    Target: {
+      type: "TypeTargetType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:Target",
+        type: "TargetType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    BusinessScope: {
+      type: "TypeBusinessScopeType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:BusinessScope",
+        type: "BusinessScopeType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    EBMTracking: {
+      type: "TypeEBMTrackingType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:EBMTracking",
+        type: "EBMTrackingType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    FaultNotification: {
+      type: "TypeFaultNotificationType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:FaultNotification",
+        type: "FaultNotificationType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    MessageBatch: {
+      type: "TypeMessageBatchType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:MessageBatch",
+        type: "MessageBatchType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    Request: {
+      type: "TypeRequestType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "xacml-context:Request",
+        type: "xacml-context:RequestType",
+        attribute: false,
+        ns: "xacml-context"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    B2BProfile: {
+      type: "TypeB2BProfileType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:B2BProfile",
+        type: "B2BProfileType",
+        "xsd:annotation": {
+          "xsd:documentation": "If the EBM is being used in a B2B flow, i.e. is used to either trigger an outbound Provider B2BCS Impl or is generated by an inbound Requestor B2BCS Impl, this element captures the sending and receiving trading partner information"
+        },
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    Custom: {
+      type: "TypeCustomEBMHeaderType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:Custom",
+        type: "corecomcust:CustomEBMHeaderType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    languageCode: {
+      type: "TypeLanguageCodeType",
+      wsdlDefinition: {
+        name: "languageCode",
+        type: "LanguageCodeType",
+        attribute: true
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    }
+	};
+	
+	if(parentObj === 'getWsdlDefinition')
+	{
+		return data;
+	}
+	
+	// Class property definitions here:
+	Modeler.extend(className, {
+	  EBMID: {
+      type: "TypeIdentifierType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:EBMID",
+        type: "IdentifierType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    EBMName: {
+      type: "TypeNameType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:EBMName",
+        type: "NameType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    EBOName: {
+      type: "TypeNameType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:EBOName",
+        type: "NameType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    CreationDateTime: {
+      type: "TypeDateTimeType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:CreationDateTime",
+        type: "DateTimeType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    RequestEBMID: {
+      type: "TypeIdentifierType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:RequestEBMID",
+        type: "IdentifierType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    VerbCode: {
+      type: "TypeCodeType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:VerbCode",
+        type: "CodeType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    MessageProcessingInstruction: {
+      type: "TypeMessageProcessingInstructionType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:MessageProcessingInstruction",
+        type: "MessageProcessingInstructionType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    Sender: {
+      type: "TypeSenderType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:Sender",
+        type: "SenderType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    Target: {
+      type: "TypeTargetType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:Target",
+        type: "TargetType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    BusinessScope: {
+      type: "TypeBusinessScopeType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:BusinessScope",
+        type: "BusinessScopeType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    EBMTracking: {
+      type: "TypeEBMTrackingType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:EBMTracking",
+        type: "EBMTrackingType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    FaultNotification: {
+      type: "TypeFaultNotificationType",
+      wsdlDefinition: {
+        maxOccurs: "unbounded",
+        minOccurs: "0",
+        name: "WL5G3N2:FaultNotification",
+        type: "FaultNotificationType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET | Modeler.ARRAY,
+      required: false
+    },
+    MessageBatch: {
+      type: "TypeMessageBatchType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:MessageBatch",
+        type: "MessageBatchType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    Request: {
+      type: "TypeRequestType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "xacml-context:Request",
+        type: "xacml-context:RequestType",
+        attribute: false,
+        ns: "xacml-context"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    B2BProfile: {
+      type: "TypeB2BProfileType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:B2BProfile",
+        type: "B2BProfileType",
+        "xsd:annotation": {
+          "xsd:documentation": "If the EBM is being used in a B2B flow, i.e. is used to either trigger an outbound Provider B2BCS Impl or is generated by an inbound Requestor B2BCS Impl, this element captures the sending and receiving trading partner information"
+        },
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    Custom: {
+      type: "TypeCustomEBMHeaderType",
+      wsdlDefinition: {
+        minOccurs: "0",
+        name: "WL5G3N2:Custom",
+        type: "corecomcust:CustomEBMHeaderType",
+        attribute: false,
+        ns: "WL5G3N2"
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    },
+    languageCode: {
+      type: "TypeLanguageCodeType",
+      wsdlDefinition: {
+        name: "languageCode",
+        type: "LanguageCodeType",
+        attribute: true
+      },
+      mask: Modeler.GET | Modeler.SET,
+      required: false
+    }
+	}, parentObj, json);
+};
+
+module.exports = TypeEBMHeaderType;
+Modeler.register(TypeEBMHeaderType, "TypeEBMHeaderType");

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WL5G3N0:definitions name="EnterpriseCustomerManagementEBS" targetNamespace="http://xmlns.oracle.com/EnterpriseServices/Core/CustomerParty/V2" xmlns:WL5G3N0="http://schemas.xmlsoap.org/wsdl/" xmlns:WL5G3N1="http://xmlns.oracle.com/EnterpriseObjects/Core/EBO/CustomerParty/V2" xmlns:WL5G3N2="http://xmlns.oracle.com/EnterpriseObjects/Core/Common/V2" xmlns:WL5G3N3="http://xmlns.oracle.com/EnterpriseServices/Core/CustomerParty/V2" xmlns:WL5G3N4="http://schemas.xmlsoap.org/wsdl/soap/">
+  <WL5G3N0:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/EnterpriseServices/CustomerParty/V2" xmlns:corecom="http://xmlns.oracle.com/EnterpriseObjects/Core/Common/V2" xmlns:corecustomerpartyebs="http://xmlns.oracle.com/EnterpriseServices/Core/CustomerParty/V2" xmlns:customerpartyebo="http://xmlns.oracle.com/EnterpriseObjects/Core/EBO/CustomerParty/V2" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:svcdoc="http://xmlns.oracle.com/Services/Documentation/V1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://xmlns.oracle.com/EnterpriseObjects/Core/EBO/CustomerParty/V2" schemaLocation="https://ingosbo2o1.cmd3.cbd.extnp.national.com.au:8002/OSB_EnterpriseCustomerManagement/ProxyService/EnterpriseCustomerManagement?SCHEMA%2FOSB_EnterpriseCustomerManagement%2FResources%2Fapps%2FAIAMetaData%2FAIAComponents%2FEnterpriseObjectLibrary%2FIndustry%2FBankingAndWealthManagement%2FEBO%2FCustomerParty%2FV2%2FCustomerPartyEBM"/>
+      <xsd:import namespace="http://xmlns.oracle.com/EnterpriseObjects/Core/Common/V2" schemaLocation="https://ingosbo2o1.cmd3.cbd.extnp.national.com.au:8002/OSB_EnterpriseCustomerManagement/ProxyService/EnterpriseCustomerManagement?SCHEMA%2FOSB_EnterpriseCustomerManagement%2FResources%2Fapps%2FAIAMetaData%2FAIAComponents%2FEnterpriseObjectLibrary%2FIndustry%2FBankingAndWealthManagement%2FCommon%2FV2%2FMeta"/>
+    </xsd:schema>
+  </WL5G3N0:types>
+  <WL5G3N0:message name="SyncCustomerPartyListRespMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the response payload to the syncCustomerPartyList operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:SyncCustomerPartyListResponseEBM" name="SyncCustomerPartyListResponseEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="SyncCustomerPartyAccountListRespMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the response payload to the SyncCustomerPartyAccountList operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:SyncCustomerPartyAccountListResponseEBM" name="SyncCustomerPartyAccountListResponseEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="SyncCustomerPartyListAsyncRespMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the response payload to the syncCustomerPartyList operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:SyncCustomerPartyListEBM" name="SyncCustomerPartyListEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="FaultMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used for propagating Error Context and Error Message
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N2:Fault" name="AIAFault"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="QueryCustomerPartyReqMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the request payload to the QueryCustomerParty operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:QueryCustomerPartyEBM" name="QueryCustomerPartyEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="QueryCustomerPartyRespMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the response payload to the QueryCustomerParty operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:QueryCustomerPartyResponseEBM" name="QueryCustomerPartyResponseEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="QueryCustomerPartyListReqMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the request payload to the QueryCustomerPartyList operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:QueryCustomerPartyListEBM" name="QueryCustomerPartyListEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="QueryCustomerPartyListRespMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the response payload to the QueryCustomerPartyList operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:QueryCustomerPartyListResponseEBM" name="QueryCustomerPartyListResponseEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="SyncCustomerPartyListReqMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the request payload to the SyncCustomerPartyList operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:SyncCustomerPartyListEBM" name="SyncCustomerPartyListEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="SyncCustomerPartyAccountListReqMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the request payload to the SyncCustomerPartyAccountList operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:SyncCustomerPartyAccountListEBM" name="SyncCustomerPartyAccountListEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="FetchCustomerSyncStatusReqMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the request payload to the SyncCustomerPartyList operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:QueryCustomerPartyEBM" name="QueryCustomerPartyEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:message name="FetchCustomerSyncStatusRespMsg">
+    <WL5G3N0:documentation>
+			
+				This message is used as the request payload to the SyncCustomerPartyAccountList operation
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:part element="WL5G3N1:QueryCustomerPartyResponseEBM" name="QueryCustomerPartyResponseEBM"/>
+  </WL5G3N0:message>
+  <WL5G3N0:portType name="BankingAndWealthManagementCustomerPartyEBS">
+    <WL5G3N0:documentation>
+			
+				This interface contains operations for the Request-Response and Request-Only patterns
+				RequestCustomerParty EBS Interface
+				Active
+			
+		</WL5G3N0:documentation>
+    <WL5G3N0:operation name="IdRetrieve">
+      <WL5G3N0:documentation>
+				
+					This operation is used to query a CustomerParty EBO
+					SYNC_REQ_RESPONSE
+					QueryCustomerParty
+					Active
+					Public
+				
+			</WL5G3N0:documentation>
+      <WL5G3N0:input message="WL5G3N3:QueryCustomerPartyReqMsg"/>
+      <WL5G3N0:output message="WL5G3N3:QueryCustomerPartyRespMsg"/>
+      <WL5G3N0:fault message="WL5G3N3:FaultMsg" name="fault"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="CustomerSearchAndDedupe">
+      <WL5G3N0:documentation>
+				
+					This operation is used to query multiple CustomerParty EBOs
+					SYNC_REQ_RESPONSE
+					QueryCustomerPartyList
+					Active
+					Public
+				
+			</WL5G3N0:documentation>
+      <WL5G3N0:input message="WL5G3N3:QueryCustomerPartyListReqMsg"/>
+      <WL5G3N0:output message="WL5G3N3:QueryCustomerPartyListRespMsg"/>
+      <WL5G3N0:fault message="WL5G3N3:FaultMsg" name="fault"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="CustomerSync">
+      <WL5G3N0:documentation>
+				
+					This operation is used to sync multiple CustomerParty EBOs
+					SYNC_REQ_RESPONSE
+					CustomerSync
+					Active
+					Public
+				
+			</WL5G3N0:documentation>
+      <WL5G3N0:input message="WL5G3N3:SyncCustomerPartyListReqMsg"/>
+      <WL5G3N0:output message="WL5G3N3:SyncCustomerPartyListRespMsg"/>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="FetchCustomerSyncStatus">
+      <WL5G3N0:documentation>
+				
+					This operation is used to fetch the sync status of customer. Any Sync Error will be returned in response.
+					SYNC_REQ_RESPONSE
+					FetchCustomerSyncStatus
+					Active
+					Public
+				
+			</WL5G3N0:documentation>
+      <WL5G3N0:input message="WL5G3N3:FetchCustomerSyncStatusReqMsg"/>
+      <WL5G3N0:output message="WL5G3N3:FetchCustomerSyncStatusRespMsg"/>
+    </WL5G3N0:operation>
+  </WL5G3N0:portType>
+  <WL5G3N0:binding name="EnterpriseCustomerManagementEBSBinding" type="WL5G3N3:BankingAndWealthManagementCustomerPartyEBS">
+    <WL5G3N4:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <WL5G3N0:operation name="IdRetrieve">
+      <WL5G3N4:operation soapAction="QueryCustomerParty" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="fault">
+        <WL5G3N4:fault name="fault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="CustomerSearchAndDedupe">
+      <WL5G3N4:operation soapAction="QueryCustomerPartyList" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:output>
+      <WL5G3N0:fault name="fault">
+        <WL5G3N4:fault name="fault" use="literal"/>
+      </WL5G3N0:fault>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="CustomerSync">
+      <WL5G3N4:operation soapAction="SyncCustomerPartyList" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+    <WL5G3N0:operation name="FetchCustomerSyncStatus">
+      <WL5G3N4:operation soapAction="FetchCustomerSyncStatus" style="document"/>
+      <WL5G3N0:input>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:input>
+      <WL5G3N0:output>
+        <WL5G3N4:body use="literal"/>
+      </WL5G3N0:output>
+    </WL5G3N0:operation>
+  </WL5G3N0:binding>
+  <WL5G3N0:service name="EnterpriseCustomerManagementEBSBinding_ep">
+    <WL5G3N0:port binding="WL5G3N3:EnterpriseCustomerManagementEBSBinding" name="EnterpriseCustomerManagementEBSBinding_pt">
+      <WL5G3N4:address location="https://ingosbo2o1.cmd3.cbd.extnp.national.com.au:8002/OSB_EnterpriseCustomerManagement/ProxyService/EnterpriseCustomerManagement"/>
+    </WL5G3N0:port>
+  </WL5G3N0:service>
+</WL5G3N0:definitions>
